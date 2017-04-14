@@ -63,7 +63,7 @@
           <span class="icon-chevron-right"></span>
         Project Information</a>
                   </li>
-                                                                                                                                                    
+                                                                                                                                  
       <li>
   
                           <a href="project-reports.html" title="Project Reports">
@@ -90,13 +90,6 @@
                           <a href="checkstyle.html" title="Checkstyle">
           <span class="none"></span>
         Checkstyle</a>
-            </li>
-                    
-      <li>
-  
-                          <a href="cpd.html" title="CPD">
-          <span class="none"></span>
-        CPD</a>
             </li>
                     
       <li class="active">
@@ -147,71 +140,20 @@
 <td>Avoid unused private fields such as 'TSItemTable'.</td>
 <td>163</td></tr>
 <tr class="a">
-<td>Avoid unused private fields such as 'TSitemVColumn'.</td>
-<td>166</td></tr>
-<tr class="b">
-<td>Avoid unused private fields such as 'TSitemWColumn'.</td>
-<td>169</td></tr>
-<tr class="a">
-<td>Avoid unused method parameters such as 'event'.</td>
+<td>Avoid unused private methods such as 'handleGenerateItemButton()'.</td>
 <td>202</td></tr>
 <tr class="b">
-<td>Avoid unused private methods such as 'handleGenerateItemButton(ActionEvent)'.</td>
-<td>202</td></tr>
-<tr class="a">
-<td>Avoid unused private methods such as 'handleAddItemButton(ActionEvent)'.</td>
-<td>208</td></tr>
-<tr class="b">
-<td>Avoid unused method parameters such as 'event'.</td>
+<td>Avoid unused private methods such as 'handleAddItemButton()'.</td>
 <td>208</td></tr>
 <tr class="a">
-<td>Avoid unused private methods such as 'handleSolveGAButton(ActionEvent)'.</td>
+<td>Avoid unused private methods such as 'handleSolveGAButton()'.</td>
 <td>233</td></tr>
 <tr class="b">
-<td>Avoid unused method parameters such as 'event'.</td>
-<td>233</td></tr>
-<tr class="a">
-<td>Avoid unused private methods such as 'handleSolveSAButton(ActionEvent)'.</td>
-<td>248</td></tr>
-<tr class="b">
-<td>Avoid unused method parameters such as 'event'.</td>
+<td>Avoid unused private methods such as 'handleSolveSAButton()'.</td>
 <td>248</td></tr>
 <tr class="a">
-<td>Avoid unused private methods such as 'handleSolveHCButton(ActionEvent)'.</td>
-<td>266</td></tr>
-<tr class="b">
-<td>Avoid unused method parameters such as 'event'.</td>
+<td>Avoid unused private methods such as 'handleSolveHCButton()'.</td>
 <td>266</td></tr></table></div>
-<div class="section">
-<h3><a name="commhrimazmodelBinarySolution.java"></a>com/mhrimaz/model/BinarySolution.java</h3>
-<table border="0" class="table table-striped">
-<tr class="a">
-<th>Violation</th>
-<th>Line</th></tr>
-<tr class="b">
-<td>Useless parentheses.</td>
-<td>92</td></tr>
-<tr class="a">
-<td>Useless parentheses.</td>
-<td>98</td></tr></table></div>
-<div class="section">
-<h3><a name="commhrimazmodelItem.java"></a>com/mhrimaz/model/Item.java</h3>
-<table border="0" class="table table-striped">
-<tr class="b">
-<th>Violation</th>
-<th>Line</th></tr>
-<tr class="a">
-<td>Useless parentheses.</td>
-<td>84</td></tr></table></div>
-<div class="section">
-<h3><a name="commhrimazmodelUtil.java"></a>com/mhrimaz/model/Util.java</h3>
-<table border="0" class="table table-striped">
-<tr class="b">
-<th>Violation</th>
-<th>Line</th></tr>
-<tr class="a">
-<td>Useless parentheses.</td>
-<td>46</td></tr></table></div>
 <div class="section">
 <h3><a name="commhrimazsolverKnapsackStrategy.java"></a>com/mhrimaz/solver/KnapsackStrategy.java</h3>
 <table border="0" class="table table-striped">
@@ -240,23 +182,56 @@
 <td>Useless parentheses.</td>
 <td>59</td></tr></table></div>
 <div class="section">
-<h3><a name="commhrimazsolverstrategyGAStrategy.java"></a>com/mhrimaz/solver/strategy/GAStrategy.java</h3>
+<h3><a name="commhrimazsolverstrategyHCBestFirstStrategy.java"></a>com/mhrimaz/solver/strategy/HCBestFirstStrategy.java</h3>
 <table border="0" class="table table-striped">
 <tr class="a">
 <th>Violation</th>
 <th>Line</th></tr>
 <tr class="b">
-<td>Useless parentheses.</td>
-<td>71</td></tr></table></div>
+<td>Avoid unused imports such as 'com.mhrimaz.model.Item'</td>
+<td>27</td></tr>
+<tr class="a">
+<td>Avoid unused imports such as 'com.mhrimaz.model.KnapsackData'</td>
+<td>28</td></tr>
+<tr class="b">
+<td>Avoid unused imports such as 'com.mhrimaz.model.Solution'</td>
+<td>29</td></tr>
+<tr class="a">
+<td>Avoid unused imports such as 'java.util.List'</td>
+<td>31</td></tr></table></div>
 <div class="section">
 <h3><a name="commhrimazsolverstrategyHCSidewaysStrategy.java"></a>com/mhrimaz/solver/strategy/HCSidewaysStrategy.java</h3>
 <table border="0" class="table table-striped">
-<tr class="a">
+<tr class="b">
 <th>Violation</th>
 <th>Line</th></tr>
+<tr class="a">
+<td>Avoid unused imports such as 'com.mhrimaz.model.Item'</td>
+<td>27</td></tr>
 <tr class="b">
-<td>An empty statement (semicolon) not part of a loop</td>
-<td>67</td></tr></table></div></div>
+<td>Avoid unused imports such as 'com.mhrimaz.model.KnapsackData'</td>
+<td>28</td></tr>
+<tr class="a">
+<td>Avoid unused imports such as 'com.mhrimaz.model.Solution'</td>
+<td>29</td></tr></table></div>
+<div class="section">
+<h3><a name="commhrimazsolverstrategyHCStandardStrategy.java"></a>com/mhrimaz/solver/strategy/HCStandardStrategy.java</h3>
+<table border="0" class="table table-striped">
+<tr class="b">
+<th>Violation</th>
+<th>Line</th></tr>
+<tr class="a">
+<td>Avoid unused imports such as 'com.mhrimaz.model.Item'</td>
+<td>27</td></tr>
+<tr class="b">
+<td>Avoid unused imports such as 'com.mhrimaz.model.KnapsackData'</td>
+<td>28</td></tr>
+<tr class="a">
+<td>Avoid unused imports such as 'com.mhrimaz.model.Solution'</td>
+<td>29</td></tr>
+<tr class="b">
+<td>Avoid unused imports such as 'java.util.List'</td>
+<td>31</td></tr></table></div></div>
                   </div>
             </div>
           </div>

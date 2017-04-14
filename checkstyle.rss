@@ -25,9 +25,9 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017 Hossein Rimaz</copyright>
     <item>
-      <title>File: 18,
+      <title>File: 19,
              Errors: 0,
-             Warnings: 923,
+             Warnings: 921,
              Infos: 0
       </title>
             <link>https://github.com/mhrimaz/KnapsackFX/checkstyle.html</link>
@@ -52,7 +52,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  36
+                  37
                 </td>
                 <td>
                   0
@@ -81,6 +81,20 @@ under the License.
                 </td>
                 <td>
                   26
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.strategy.TSStrategy.java">com/mhrimaz/solver/strategy/TSStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
                 </td>
                 <td>
                   0
@@ -150,7 +164,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  19
+                  14
                 </td>
                 <td>
                   0
@@ -234,7 +248,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  242
+                  241
                 </td>
                 <td>
                   0
@@ -248,7 +262,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  57
+                  53
                 </td>
                 <td>
                   0

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<rss version="0.91">
+  <channel>
+    <title>KnapsackFX - Checkstyle report</title>
+    <link>https://github.com/mhrimaz/KnapsackFX</link>
+    <description>KnapsackFX - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2017 Hossein Rimaz</copyright>
+    <item>
+      <title>File: 18,
+             Errors: 362,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>https://github.com/mhrimaz/KnapsackFX/checkstyle.html</link>
+      <description>
+        <p>Click <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.model.Solution.java">com/mhrimaz/model/Solution.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  15
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.strategy.DPStrategy.java">com/mhrimaz/solver/strategy/DPStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.model.KnapsackData.java">com/mhrimaz/model/KnapsackData.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  21
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.model.Util.java">com/mhrimaz/model/Util.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  6
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.strategy.SAStrategy.java">com/mhrimaz/solver/strategy/SAStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  26
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.strategy.HCRandomRestartStrategy.java">com/mhrimaz/solver/strategy/HCRandomRestartStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  12
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.KnapsackSolver.java">com/mhrimaz/solver/KnapsackSolver.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.knapsackfx.MainApp.java">com/mhrimaz/knapsackfx/MainApp.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  9
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.model.Item.java">com/mhrimaz/model/Item.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  20
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.HillClimbingStrategy.java">com/mhrimaz/solver/HillClimbingStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.strategy.HCSidewaysStrategy.java">com/mhrimaz/solver/strategy/HCSidewaysStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  17
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.strategy.HCStandardStrategy.java">com/mhrimaz/solver/strategy/HCStandardStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.KnapsackStrategy.java">com/mhrimaz/solver/KnapsackStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  6
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.knapsackfx.FXMLDocumentController.java">com/mhrimaz/knapsackfx/FXMLDocumentController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  113
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.strategy.GAStrategy.java">com/mhrimaz/solver/strategy/GAStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  24
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.model.BinarySolution.java">com/mhrimaz/model/BinarySolution.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  30
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.strategy.HCBestFirstStrategy.java">com/mhrimaz/solver/strategy/HCBestFirstStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  12
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mhrimaz/KnapsackFX/checkstyle.html#com.mhrimaz.solver.strategy.HCStochasticStrategy.java">com/mhrimaz/solver/strategy/HCStochasticStrategy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  14
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+

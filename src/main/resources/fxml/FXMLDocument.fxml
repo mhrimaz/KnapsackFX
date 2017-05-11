@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mhrimaz.knapsackfx.FXMLDocumentController">
+    <children>
+        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <VBox alignment="TOP_CENTER" prefHeight="568.0" prefWidth="231.0" spacing="10.0">
+                    <children>
+                        <TableView fx:id="itemTable" prefHeight="377.0" prefWidth="231.0" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="itemVColumn" editable="false" prefWidth="108.0" sortable="false" text="Item Value" />
+                                <TableColumn fx:id="itemWColumn" editable="false" prefWidth="122.0" sortable="false" text="Item Weight" />
+                            </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="231.0" spacing="15.0">
+                            <children>
+                                <TextField fx:id="itemVTextField" prefHeight="25.0" prefWidth="77.0" promptText="Item Value" />
+                                <TextField fx:id="itemWTextField" prefHeight="25.0" prefWidth="87.0" promptText="Item Weight" />
+                                <Button mnemonicParsing="false" onAction="#handleAddItemButton" text="Add" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="231.0" spacing="15.0">
+                            <children>
+                                <TextField fx:id="itemSizeField" prefHeight="25.0" prefWidth="102.0" promptText="Item Size" />
+                                <Button mnemonicParsing="false" onAction="#handleGenerateItemButton" prefHeight="25.0" prefWidth="116.0" text="Generate Item" />
+                            </children>
+                        </HBox>
+                        <TextField fx:id="knapsackWField" prefHeight="25.0" prefWidth="171.0" promptText="Knapsack Maximum Weight" />
+                        <Button mnemonicParsing="false" onAction="#handleClearAlllButton" text="Clear All Items" />
+                    </children>
+                </VBox>
+                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                <TabPane prefHeight="562.0" prefWidth="712.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+                    <tabs>
+                        <Tab closable="false" text="DP Solution ">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="315.0" prefWidth="336.0">
+                                    <children>
+                                        <HBox layoutX="14.0" layoutY="14.0" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                            <children>
+                                                <TableView fx:id="DPItemTable" prefHeight="432.0" prefWidth="253.0" HBox.hgrow="SOMETIMES">
+                                                    <columns>
+                                                        <TableColumn fx:id="DPitemVColumn" editable="false" prefWidth="114.0" sortable="false" text="Item Value" />
+                                                        <TableColumn fx:id="DPitemWColumn" editable="false" prefWidth="137.0" sortable="false" text="Item Weight" />
+                                                    </columns>
+                                                </TableView>
+                                                <VBox prefHeight="432.0" prefWidth="379.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <Label fx:id="DPTimeLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="337.0" text="DP Time: ">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="DPValueLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="251.0" text="Total Value:">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="DPWeightLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="331.0" text="Total Weight:">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Button mnemonicParsing="false" onAction="#handleSolveDPButton" text="Solve" />
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="geneticItemTable" closable="false" text="Genetic Solution">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <HBox layoutX="14.0" layoutY="14.0" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                            <children>
+                                                <TableView fx:id="GAItemTable" prefHeight="531.0" prefWidth="250.0" HBox.hgrow="SOMETIMES">
+                                                    <columns>
+                                                        <TableColumn fx:id="GAitemVColumn" prefWidth="114.0" text="Item Value" />
+                                                        <TableColumn fx:id="GAitemWColumn" prefWidth="137.0" text="Item Weight" />
+                                                    </columns>
+                                                </TableView>
+                                                <VBox prefHeight="432.0" prefWidth="425.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <Label fx:id="GATimeLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="374.0" text="GA Time: ">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="GAValueLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="392.0" text="Total Value:">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="GAWeightLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="348.0" text="Total Weight:">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <GridPane alignment="CENTER_LEFT" prefHeight="179.0" prefWidth="429.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="50.0" prefWidth="207.0" />
+                                                                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="181.0" percentWidth="50.0" prefWidth="208.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label text="Genetic Config: ">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <TextField fx:id="populationSizeField" prefHeight="25.0" prefWidth="161.0" promptText="Population Size" text="500" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                <TextField fx:id="crossoverRateField" prefHeight="25.0" prefWidth="192.0" promptText="Recombination Rate" text="0.7" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                <TextField fx:id="mutationRateField" prefHeight="25.0" prefWidth="94.0" promptText="Mutation Rate" text="0.005" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                <TextField fx:id="crossoverPointsField" prefHeight="25.0" prefWidth="53.0" promptText="# of Crossover Points" text="3" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                <Label text="Population Size:" GridPane.rowIndex="1">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label text="Mutation Rate:" GridPane.rowIndex="3">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label text="Recombination Rate:" GridPane.rowIndex="2">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label text="Num of Crossover Points:" GridPane.rowIndex="4">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </GridPane>
+                                                        <Button mnemonicParsing="false" onAction="#handleSolveGAButton" text="Solve" />
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="Simulated Annealing">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <HBox layoutX="14.0" layoutY="14.0" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                            <children>
+                                                <TableView fx:id="SAItemTable" prefHeight="432.0" prefWidth="256.0" HBox.hgrow="SOMETIMES">
+                                                    <columns>
+                                                        <TableColumn fx:id="SAitemVColumn" prefWidth="122.0" text="Item Value" />
+                                                        <TableColumn fx:id="SAitemWColumn" prefWidth="133.0" text="Item Weight" />
+                                                    </columns>
+                                                </TableView>
+                                                <VBox prefHeight="432.0" prefWidth="425.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <Label fx:id="SATimeLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="374.0" text="SA Time: ">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="SAValueLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="392.0" text="Total Value:">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="SAWeightLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="348.0" text="Total Weight:">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Button mnemonicParsing="false" onAction="#handleSolveSAButton" text="Solve" />
+                                                        <GridPane alignment="CENTER_LEFT" prefHeight="179.0" prefWidth="429.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="50.0" prefWidth="207.0" />
+                                                                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="181.0" percentWidth="50.0" prefWidth="208.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label text="Simulated Annealing Config: ">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <TextField fx:id="coolingFactorField" prefHeight="25.0" prefWidth="161.0" promptText="Cooling Factor" text="0.98" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                    <tooltip>
+                                                                        <Tooltip text="Between 0 and 1" />
+                                                                    </tooltip>
+                                                                </TextField>
+                                                                <TextField fx:id="terminationTempretureField" prefHeight="25.0" prefWidth="192.0" promptText="Termination Tempreture" text="0.2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                <TextField fx:id="initialTempretureField" prefHeight="25.0" prefWidth="94.0" promptText="Initial Tempreture" text="100" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                                    <tooltip>
+                                                                        <Tooltip text="Enter Empty for Automatic Initialization" />
+                                                                    </tooltip>
+                                                                </TextField>
+                                                                <TextField fx:id="neighborSamplingSizeField" prefHeight="25.0" prefWidth="53.0" promptText="Neighbor Sampling Size" text="350" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                                    <tooltip>
+                                                                        <Tooltip text="Enter Empty for Automatic Initialization" />
+                                                                    </tooltip>
+                                                                </TextField>
+                                                                <Label text="Cooling Factor:" GridPane.rowIndex="1">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label text="Initial Tempreture:" GridPane.rowIndex="3">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label text="Termination Tempreture:" GridPane.rowIndex="2">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label text="Neighbor Sampling Size:" GridPane.rowIndex="4">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="Tabu Search">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <HBox layoutX="14.0" layoutY="14.0" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                            <children>
+                                                <TableView fx:id="TSItemTable" prefHeight="432.0" prefWidth="256.0" HBox.hgrow="SOMETIMES">
+                                                    <columns>
+                                                        <TableColumn fx:id="TSitemVColumn" prefWidth="114.0" text="Item Value" />
+                                                        <TableColumn fx:id="TSitemWColumn" prefWidth="137.0" text="Item Weight" />
+                                                    </columns>
+                                                </TableView>
+                                                <VBox prefHeight="432.0" prefWidth="425.0" spacing="10.0" HBox.hgrow="ALWAYS" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="Hill Climbing">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <HBox layoutX="14.0" layoutY="14.0" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                            <children>
+                                                <TableView fx:id="HCItemTable" prefHeight="432.0" prefWidth="256.0" HBox.hgrow="SOMETIMES">
+                                                    <columns>
+                                                        <TableColumn fx:id="HCitemVColumn" prefWidth="114.0" text="Item Value" />
+                                                        <TableColumn fx:id="HCitemWColumn" prefWidth="141.0" text="Item Weight" />
+                                                    </columns>
+                                                </TableView>
+                                                <VBox prefHeight="432.0" prefWidth="425.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <Label fx:id="HCTimeLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="374.0" text="HC Time: ">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="HCValueLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="392.0" text="Total Value:">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="HCWeightLabel" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="348.0" text="Total Weight:">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <ComboBox fx:id="HCVersionBox" prefHeight="25.0" prefWidth="197.0" promptText="Hill Climbing Version">
+                                                      
+                                                        </ComboBox>
+                                          
+                                                        <Button mnemonicParsing="false" onAction="#handleSolveHCButton" text="Solve" />
+                                          <GridPane alignment="CENTER_LEFT" prefHeight="179.0" prefWidth="429.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="50.0" prefWidth="207.0" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="181.0" percentWidth="50.0" prefWidth="208.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label text="Hill Climbing Config: ">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="iterationLimitField" prefHeight="25.0" prefWidth="161.0" promptText="Iteration Limit" text="10000" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <tooltip>
+                                                      <Tooltip text="Between 0 and 1" />
+                                                   </tooltip>
+                                                </TextField>
+                                                <TextField fx:id="restartLimitField" prefHeight="25.0" prefWidth="192.0" promptText="Number of Restarts" text="20" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="sidewaysMoveField" prefHeight="25.0" prefWidth="94.0" promptText="Sideways Move Limit:" text="100" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <tooltip>
+                                                      <Tooltip text="Enter Empty for Automatic Initialization" />
+                                                   </tooltip>
+                                                </TextField>
+                                                <Label text="Iteration Limit:" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Sideways Move Limit:" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Number of Restarts:" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </GridPane>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
